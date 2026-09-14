@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的生词本 · Netflix 双语助手</title><link rel="stylesheet" href="ui.css"></head>
+<body class="book-page"><main class="book-shell">
+  <header class="book-top"><div class="brand"><div class="brand-mark" aria-hidden="true">译</div><div><h1>Netflix 双语助手</h1><p class="muted">从一个好故事，记住一句新表达。</p></div></div><span class="badge">仅保存在此浏览器</span></header>
+  <section class="book-heading"><div><div class="eyebrow">WORDS WITH A STORY</div><h1>我的生词本</h1><p class="muted small">收藏的不只是词语，还有遇见它时的那句对白。</p></div><div class="stats"><div class="stat"><strong id="total">0</strong><span>条收藏</span></div><div class="stat"><strong id="languages">0</strong><span>种语言</span></div><div class="stat"><strong id="today">0</strong><span>今日收藏</span></div></div></section>
+  <div class="book-controls"><input type="search" id="search" placeholder="搜索词语、译文或影片…" aria-label="搜索生词"><button id="export-csv">导出 CSV</button><button id="export-json">导出 JSON</button></div>
+  <p class="result-count" id="result-count">正在读取收藏…</p><p id="message" class="message" role="status" hidden></p>
+  <section id="word-list" class="word-list" aria-label="收藏列表"></section>
+  <section class="empty" id="empty" hidden><div class="empty-icon" aria-hidden="true">「 字 」</div><h2 id="empty-title">从喜欢的一句对白开始</h2><p id="empty-hint">打开 Netflix，点击原字幕里的词语，再点「收藏」。词语、译文和影片位置都会保存在这里。</p></section>
+  <footer class="book-footer">导出包含全部收藏。卸载扩展会删除本地数据，换电脑前可以先导出保存。</footer>
+</main><script src="lib/core.js"></script><script src="lib/translation.js"></script><script src="vocabulary.js"></script></body></html>

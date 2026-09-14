@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Netflix 双语助手",
+  "version": "0.1.0",
+  "description": "本地翻译 Netflix 文字字幕，支持双语显示、点击查词与本地生词本。",
+  "minimum_chrome_version": "138",
+  "permissions": ["storage"],
+  "optional_host_permissions": ["https://api.mymemory.translated.net/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Netflix 双语助手" },
+  "options_page": "vocabulary.html",
+  "content_scripts": [{
+    "matches": ["https://www.netflix.com/*"],
+    "css": ["content/native.css"],
+    "js": ["lib/core.js", "lib/translation.js", "content/adapter.js", "content/overlay.js", "content/controller.js"],
+    "run_at": "document_idle"
+  }],
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'" }
+}

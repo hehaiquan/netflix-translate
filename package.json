@@ -1,0 +1,12 @@
+{
+  "name": "netflix-translate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "无需构建的 Netflix 双语字幕与生词本 Chrome 扩展",
+  "scripts": {
+    "check": "node scripts/check.cjs",
+    "test": "node --test tests/core.test.cjs tests/translation.test.cjs tests/mymemory.test.cjs tests/background.test.cjs",
+    "test:browser": "node scripts/test-server.cjs"
+  },
+  "engines": { "node": ">=18" }
+}

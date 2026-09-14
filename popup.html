@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Netflix 双语助手</title><link rel="stylesheet" href="ui.css"></head>
+<body class="popup">
+  <header><div class="brand"><div class="brand-mark" aria-hidden="true">译</div><div><h1>Netflix 双语助手</h1><p class="muted">看世界，也读懂每一句。</p></div></div><label class="switch" title="启用双语字幕"><input id="enabled" type="checkbox" aria-label="启用双语字幕"><span></span></label></header>
+  <section class="status-card"><strong id="page-status">正在读取播放状态…</strong><p id="page-hint">在 Netflix 中开启原文字幕，译文会显示在下方。</p></section>
+  <div class="field"><label for="sourceLanguage">原字幕语言 <span class="muted">译为简体中文</span></label><select id="sourceLanguage"><option value="auto">自动识别</option></select></div>
+  <div class="field"><label for="fontSize">字幕字号 <output id="fontSize-value">26 px</output></label><input id="fontSize" type="range" min="16" max="44" step="1"></div>
+  <div class="field"><label for="backgroundOpacity">背景不透明度 <output id="backgroundOpacity-value">65%</output></label><input id="backgroundOpacity" type="range" min="0" max="100" step="5"></div>
+  <div class="field"><label for="bottomOffset">距画面底部 <output id="bottomOffset-value">10%</output></label><input id="bottomOffset" type="range" min="3" max="35" step="1"></div>
+  <hr class="section-rule">
+  <section><div class="online-heading"><strong>MyMemory 在线备用</strong><label class="switch"><input id="onlineFallback" type="checkbox" aria-label="开启 MyMemory 在线备用"><span></span></label></div><p class="muted small">本地翻译不可用时使用。开启后，待翻译的字幕或词语会发送给 MyMemory；匿名额度每天 5,000 字符。</p><div class="quota"><span id="quota">默认使用本地翻译</span><button id="retry" hidden>重试在线翻译</button></div></section>
+  <p class="message" id="message" role="status" hidden></p>
+  <footer><button class="wide primary" id="open-book">打开我的生词本 ↗</button><p class="footnote">免费 · 无需 Key · 生词仅保存在此浏览器</p></footer>
+  <script src="lib/core.js"></script><script src="lib/translation.js"></script><script src="popup.js"></script>
+</body></html>

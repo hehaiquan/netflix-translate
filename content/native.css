@@ -1,0 +1,5 @@
+/* 仅隐藏已由本插件接管的字幕；独立于 Netflix 持续重写的行内样式。 */
+[data-netflix-translate-hidden="true"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
